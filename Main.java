@@ -6,12 +6,8 @@ public class Main {
         Horse competitors[] = {horse1, horse2};
 
         GrandPrix race = new GrandPrix(competitors);
-        try {
-            race.startRace();
-            System.out.println(race.winner);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
 
+        race.startRace();
+        System.out.println("The winner is: " + race.winner);
     }
 }

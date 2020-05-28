@@ -16,7 +16,7 @@ public class Horse implements Runnable {
     }
 
     public void ready() {
-        System.out.println(this.name +" Ready!");
+        System.out.println(this.name + " Ready!");
     }
 
 
@@ -26,7 +26,7 @@ public class Horse implements Runnable {
             this.prepare();
             this.ready();
         } else
-            System.out.println(this.name +" Running!!!!");
+            System.out.println(this.name + " Running!!!!");
     }
 
     public void setActionToPerformed(String action) {
@@ -47,12 +47,6 @@ public class Horse implements Runnable {
 
     @Override
     public String toString() {
-        return "Horse{" +
-                "name='" + name + '\'' +
-                ", raceNumber=" + raceNumber +
-                ", tired=" + tired +
-                ", timesWon=" + timesWon +
-                ", performing='" + performing + '\'' +
-                '}';
+        return name + " Race Number: " + raceNumber;
     }
 }

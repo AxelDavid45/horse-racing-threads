@@ -9,8 +9,8 @@ public class GrandPrix {
             throw new IllegalArgumentException();
     }
 
-    public void startRace() throws InterruptedException {
-        for(Horse competitor: competitors) {
+    public void startRace() {
+        for (Horse competitor : competitors) {
             competitor.setActionToPerformed("preparing");
         }
         Thread horse1 = new Thread(competitors[0]);
@@ -21,7 +21,7 @@ public class GrandPrix {
         horse2.start();
         horse2.setPriority(10);
 
-        if(horse1.isAlive())
+        if (horse1.isAlive())
             winner = competitors[1];
         else
             winner = competitors[0];
