@@ -15,7 +15,7 @@ public class GrandPrix {
         }
         Thread horse1 = new Thread(competitors[0]);
         Thread horse2 = new Thread(competitors[1]);
-
+        
         horse1.start();
         horse1.setPriority(2);
         horse2.start();
