@@ -12,22 +12,21 @@ public class Horse implements Runnable {
     }
 
     public void prepare() {
-        System.out.println("Preparing...");
+        System.out.println(this.name + " is preparing...");
     }
 
     public void ready() {
-        System.out.println("Ready!");
+        System.out.println(this.name +" Ready!");
     }
 
 
     @Override
     public void run() {
-        if (this.performing == "preparing")
+        if (this.performing == "preparing") {
             this.prepare();
-        else if(this.performing == "ready")
             this.ready();
-        else
-            System.out.println("Running!!!!");
+        } else
+            System.out.println(this.name +" Running!!!!");
     }
 
     public void setActionToPerformed(String action) {
@@ -40,5 +39,20 @@ public class Horse implements Runnable {
 
     public void gettingTired(boolean tired) {
         this.tired = tired;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String toString() {
+        return "Horse{" +
+                "name='" + name + '\'' +
+                ", raceNumber=" + raceNumber +
+                ", tired=" + tired +
+                ", timesWon=" + timesWon +
+                ", performing='" + performing + '\'' +
+                '}';
     }
 }
